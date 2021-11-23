@@ -1,5 +1,7 @@
 # home sweet home :)
 
+[home] (batherine.dev)
+
 ## Here lies my homepage. The current useless features are:
 * Useless homepage
 * Useless projects
