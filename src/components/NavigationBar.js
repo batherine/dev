@@ -1,26 +1,21 @@
 import {
   Box,
   Flex,
-  Avatar,
   Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
   HStack,
   useColorMode,
-  Center,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const Links = [
+const InternalLinks = [
   {
     label: "Projects",
     url: "/projects",
@@ -28,6 +23,18 @@ const Links = [
   {
     label: "Hippo's Book Club",
     url: "/bookclub",
+  },
+  {
+    label: "Gallery",
+    url: "/galleriaDeBlur",
+  },
+];
+
+const ExternalLinks = [
+  {
+    label: "GitHub",
+    url: "https://github.com/batherine",
+    icon: faGithub,
   },
 ];
 
@@ -39,10 +46,27 @@ const NavLink = ({ children, url }) => (
     rounded={"md"}
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
+      bg: useColorModeValue("yellow.400", "yellow.500"),
     }}
     to={url}
   >
+    {children}
+  </Link>
+);
+
+const ExtNavLink = ({ children, url, icon }) => (
+  <Link
+    px={2}
+    py={2}
+    rounded={"md"}
+    _hover={{
+      textDecoration: "none",
+      bg: useColorModeValue("yellow.400", "yellow.500"),
+    }}
+    href={url}
+    isExternal
+  >
+    <FontAwesomeIcon icon={icon} size="lg" />
     {children}
   </Link>
 );
@@ -64,7 +88,7 @@ const NavigationBar = (props) => {
         />
         <HStack spacing={8} alignItems={"center"}>
           <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
-            {Links.map((link, i) => (
+            {InternalLinks.map((link, i) => (
               <NavLink key={i} url={link.url}>
                 {link.label}
               </NavLink>
@@ -72,36 +96,18 @@ const NavigationBar = (props) => {
           </HStack>
         </HStack>
 
-        <Flex alignItems={"center"}>
-          <Stack direction={"row"} spacing={7}>
+        <Stack direction={"row"} spacing={8} alignItems="center">
+          <Stack direction={"row"} spacing={4} display="inline-flex">
+            {ExternalLinks.map((link, i) => (
+              <ExtNavLink key={i} url={link.url} icon={link.icon}>
+                {link.label}
+              </ExtNavLink>
+            ))}
             <Button onClick={toggleColorMode}>
               {useColorModeValue(<MoonIcon />, <SunIcon />)}
             </Button>
-
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Avatar size={"sm"} src={""} />
-              </MenuButton>
-              <MenuList alignItems={"center"}>
-                <br />
-                <Center>
-                  <Avatar size={"2x1"} src={""} />
-                </Center>
-                <br />
-                <MenuDivider />
-                <MenuItem> One </MenuItem>
-                <MenuItem> Two </MenuItem>
-                <MenuItem> Three </MenuItem>
-              </MenuList>
-            </Menu>
           </Stack>
-        </Flex>
+        </Stack>
       </Flex>
     </Box>
   );
