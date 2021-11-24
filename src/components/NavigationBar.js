@@ -57,7 +57,7 @@ const NavLink = ({ children, url }) => (
 const ExtNavLink = ({ children, url, icon }) => (
   <Link
     px={2}
-    py={2}
+    py={1}
     rounded={"md"}
     _hover={{
       textDecoration: "none",
@@ -78,7 +78,6 @@ const NavigationBar = (props) => {
   return (
     <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-        <Box>Logo</Box>
         <IconButton
           size={"md"}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -93,20 +92,18 @@ const NavigationBar = (props) => {
                 {link.label}
               </NavLink>
             ))}
-          </HStack>
-        </HStack>
-
-        <Stack direction={"row"} spacing={8} alignItems="center">
-          <Stack direction={"row"} spacing={4} display="inline-flex">
             {ExternalLinks.map((link, i) => (
               <ExtNavLink key={i} url={link.url} icon={link.icon}>
                 {link.label}
               </ExtNavLink>
             ))}
-            <Button onClick={toggleColorMode}>
-              {useColorModeValue(<MoonIcon />, <SunIcon />)}
-            </Button>
-          </Stack>
+          </HStack>
+        </HStack>
+
+        <Stack direction={"row"} spacing={8} alignItems="center">
+          <Button onClick={toggleColorMode}>
+            {useColorModeValue(<MoonIcon />, <SunIcon />)}
+          </Button>
         </Stack>
       </Flex>
     </Box>

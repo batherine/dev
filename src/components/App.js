@@ -13,7 +13,7 @@ const App = ({ children, router }) => {
     <Box>
       <BrowserRouter>
         <NavigationBar />
-        <Container maxW="container.lg" pt={"100px"}>
+        <Container maxW="container.lg" pt={"25px"}>
           <Routes>
             <Route path="/" exact element={<Home />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
@@ -22,7 +22,6 @@ const App = ({ children, router }) => {
             <Route component={<NotFound />}></Route>
           </Routes>
         </Container>
-
         <Footer />
       </BrowserRouter>
     </Box>
