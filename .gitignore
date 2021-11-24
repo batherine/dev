@@ -111,10 +111,10 @@ dist
 
 # testing
 /coverage
+/database
 
 # production
 /build
-/database
 
 # misc
 .DS_Store
