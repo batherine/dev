@@ -1,4 +1,4 @@
-import { photos } from "../components/Photos";
+import { photos } from "../components/photos";
 import Gallery from "react-grid-gallery";
 import Section from "../components/Section";
 import { Box } from "@chakra-ui/react";
