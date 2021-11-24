@@ -8,10 +8,24 @@ import {
 import Gallery from "react-grid-gallery";
 import Section from "../components/Section";
 
+//TODO Book should have title shown  when hovered over
+//render () {
+//  var images =
+//          this.state.images.map((i) => {
+//              i.customOverlay = (
+//                      <div style={captionStyle}>
+//                      <div>{i.caption}</div>
+//                      {i.hasOwnProperty('tags') &&
+//                       this.setCustomTags(i)}
+//                  </div>);
+//              return i;
+//          });
+
 const Tier = ({ heading, tierList }) => {
   return (
     <div>
       <VStack
+        boxShadow="md"
         w="100%"
         h="300"
         alignItems="left"
@@ -19,11 +33,11 @@ const Tier = ({ heading, tierList }) => {
         bg={useColorModeValue("gray.100", "gray.900")}
         _hover={{
           textDecoration: "none",
-          bg: useColorModeValue("gray.100", "gray.700"),
+          bg: useColorModeValue("gray.200", "gray.700"),
         }}
       >
         <Flex>
-          <Heading as="h2" size="lg" textAlign="left" padding={5}>
+          <Heading size="md" textAlign="left" padding={5}>
             {heading}
           </Heading>
         </Flex>

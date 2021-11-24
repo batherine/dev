@@ -76,8 +76,9 @@ const NavigationBar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} boxShadow="lg">
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <div />
         <IconButton
           size={"md"}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -99,7 +100,6 @@ const NavigationBar = (props) => {
             ))}
           </HStack>
         </HStack>
-
         <Stack direction={"row"} spacing={8} alignItems="center">
           <Button onClick={toggleColorMode}>
             {useColorModeValue(<MoonIcon />, <SunIcon />)}
