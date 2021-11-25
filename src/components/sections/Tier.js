@@ -1,12 +1,15 @@
 import {
   Container,
   Flex,
+  Spacer,
   useColorModeValue,
   Heading,
   VStack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Gallery from "react-grid-gallery";
 import Section from "./Section";
+import EditShelfButton from "../ui/EditShelfButton";
 
 //TODO Book should have title shown  when hovered over
 //render () {
@@ -21,7 +24,11 @@ import Section from "./Section";
 //              return i;
 //          });
 
+//TODO Add edit icon to bring up modal window
+//TODO ONly let edit icon be visible on hover
+
 const Tier = ({ heading, tierList }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
       <VStack
@@ -36,10 +43,12 @@ const Tier = ({ heading, tierList }) => {
           bg: useColorModeValue("gray.200", "gray.700"),
         }}
       >
-        <Flex>
-          <Heading size="md" textAlign="left" padding={5}>
+        <Flex justifyContent="space-between" margin="2">
+          <Heading size="md" textAlign="left" padding={3}>
             {heading}
           </Heading>
+          <Spacer />
+          <EditShelfButton />
         </Flex>
         <Container>
           <Section>
