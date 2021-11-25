@@ -1,8 +1,8 @@
 //import { onValue, ref } from "firebase/database";
 //mport Tier from "../components/Section";
 import { Grid, Box } from "@chakra-ui/react";
-import { currentBooks } from "../components/Books";
-import Tier from "../components/Tier";
+import { currentBooks } from "../utils/Books";
+import Tier from "../components/sections/Tier";
 
 //import db from "../Controller/Database";
 //<Center>

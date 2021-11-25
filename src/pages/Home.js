@@ -1,9 +1,7 @@
-const Home =  () => {
-    return (
-        <div>
-            home 
-        </div>
-    )
+import { PageInProgress } from "../components/ui/Defaults";
+
+const Home = () => {
+  return <PageInProgress />;
 };
 
 export default Home;

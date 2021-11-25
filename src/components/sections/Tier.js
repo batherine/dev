@@ -6,7 +6,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Gallery from "react-grid-gallery";
-import Section from "../components/Section";
+import Section from "./Section";
 
 //TODO Book should have title shown  when hovered over
 //render () {
@@ -25,12 +25,12 @@ const Tier = ({ heading, tierList }) => {
   return (
     <div>
       <VStack
-        boxShadow="md"
+        boxShadow="dark-lg"
         w="100%"
         h="300"
         alignItems="left"
         rounded={"md"}
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg={useColorModeValue("gray.100", "gray.800")}
         _hover={{
           textDecoration: "none",
           bg: useColorModeValue("gray.200", "gray.700"),

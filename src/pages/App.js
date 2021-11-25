@@ -1,12 +1,12 @@
 import { Box, Container } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import BlurryGallery from "../pages/BlurryGallery";
-import BookClub from "../pages/BookClub";
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
-import Projects from "../pages/Projects";
-import NavigationBar from "./NavigationBar";
-import Footer from "./Footer";
+import BlurryGallery from "./BlurryGallery";
+import BookClub from "./BookClub";
+import Home from "./Home";
+import NotFound from "./NotFound";
+import Projects from "./Projects";
+import NavigationBar from "../components/sections/NavigationBar";
+import Footer from "../components/sections/Footer";
 
 const App = ({ children, router }) => {
   return (
