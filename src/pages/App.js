@@ -7,6 +7,7 @@ import NotFound from "./NotFound";
 import Projects from "./Projects";
 import NavigationBar from "../components/sections/NavigationBar";
 import Footer from "../components/sections/Footer";
+import EditShelfButton from "../components/ui/EditShelfButton";
 
 const App = ({ children, router }) => {
   return (
@@ -19,6 +20,7 @@ const App = ({ children, router }) => {
             <Route path="/projects" element={<Projects />}></Route>
             <Route path="/bookclub" element={<BookClub />}></Route>
             <Route path="/galleriaDeBlur" element={<BlurryGallery />}></Route>
+            <Route path="/Test" element={<EditShelfButton />}></Route>
             <Route component={<NotFound />}></Route>
           </Routes>
         </Container>
