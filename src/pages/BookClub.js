@@ -1,8 +1,8 @@
 //import { onValue, ref } from "firebase/database";
-import { IconButton, Grid, Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 import { currentBooks } from "../utils/Books";
 import Tier from "../components/sections/Tier";
-import { AddIcon } from "@chakra-ui/icons";
+import AddShelfButton from "../components/ui/AddShelfButton";
 
 //import db from "../database/Database";
 //<Center>
@@ -10,22 +10,6 @@ import { AddIcon } from "@chakra-ui/icons";
 //          My Shelves
 //        </Heading>
 //      </Center>
-
-const AddShelfButton = () => {
-  return (
-    <IconButton
-      icon={<AddIcon />}
-      shadow="2xl"
-      bg={useColorModeValue("yellow.400", "yellow.500")}
-      opacity="90%"
-      _hover={{
-        bg: useColorModeValue("yellow.400", "yellow.500"),
-        opacity: "100%",
-        shadow: "dark-lg",
-      }}
-    ></IconButton>
-  );
-};
 
 const BookClub = () => {
   //const [response, setResponse] = useState({});
