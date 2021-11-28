@@ -1,5 +1,5 @@
 import {
-  Container,
+  Box,
   Flex,
   Spacer,
   useColorModeValue,
@@ -7,9 +7,12 @@ import {
   VStack,
   useDisclosure,
 } from "@chakra-ui/react";
+import { Input, FormControl } from "@chakra-ui/react";
 import Gallery from "react-grid-gallery";
 import Section from "./Section";
-import EditShelfButton from "../ui/EditShelfButton";
+import UpdateShelfButton from "../ui/UpdateShelfButton";
+import AddUpdateBook from "../ui/AddUpdateBook";
+import { BOOK_HEIGHT, BOOK_MARGIN } from "../ui/Defaults";
 
 //TODO Book should have title shown  when hovered over
 //render () {
@@ -26,6 +29,31 @@ import EditShelfButton from "../ui/EditShelfButton";
 
 //TODO Add edit icon to bring up modal window
 //TODO ONly let edit icon be visible on hover
+//<IconButton
+//                icon={<AddIcon />}
+//                height={BOOK_HEIGHT + 5}
+//                padding={12}
+//                margin={2}
+//                shadow="lg"
+//                //bg={useColorModeValue("yellow.400", "yellow.500")}
+//                opacity="50%"
+//                onClick={onOpen}
+//                _hover={{
+//                  bg: useColorModeValue("yellow.400", "yellow.500"),
+//                  opacity: "100%",
+//                  shadow: "xl",
+//                }}
+//              ></IconButton>
+
+const BookNameInput = () => {
+  return (
+    <Box>
+      <FormControl id="book-name" isRequired>
+        <Input placeholder="Book name" />
+      </FormControl>
+    </Box>
+  );
+};
 
 const Tier = ({ heading, tierList }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,20 +76,24 @@ const Tier = ({ heading, tierList }) => {
             {heading}
           </Heading>
           <Spacer />
-          <EditShelfButton />
+          <UpdateShelfButton />
         </Flex>
-        <Container>
+        <Box overflowX="auto">
           <Section>
             <Gallery
               images={tierList}
               enableLightbox={true}
               enableImageSelection={false}
-              rowHeight={175}
-              margin={10}
+              rowHeight={BOOK_HEIGHT}
+              maxRows={2}
+              margin={BOOK_MARGIN}
               // TODO - Images should have shadow
             />
+            <Flex>
+              <AddUpdateBook />
+            </Flex>
           </Section>
-        </Container>
+        </Box>
       </VStack>
     </div>
   );

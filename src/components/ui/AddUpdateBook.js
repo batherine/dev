@@ -15,8 +15,8 @@ import {
   Input,
   FormControl,
 } from "@chakra-ui/react";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AddIcon } from "@chakra-ui/icons";
+import { BOOK_HEIGHT } from "../ui/Defaults";
 
 //   <Button onClick={onOpen} >Open Modal</Button> */
 //
@@ -26,11 +26,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //<FormErrorMessage>{form.errors.name}</FormErrorMessage>
 //</FormControl>
 
-const ShelfNameInput = () => {
+const BookNameInput = () => {
   return (
-    <Box>
-      <FormControl id="shelf-name" isRequired>
-        <Input placeholder="Shelf name" />
+    <Box padding={3}>
+      <FormControl id="book-name" isRequired>
+        <Input placeholder="Book name" />
+      </FormControl>
+    </Box>
+  );
+};
+
+const BookISBNInput = () => {
+  return (
+    <Box padding={3}>
+      <FormControl id="book-ISBN" isRequired>
+        <Input placeholder="ISBN #" />
       </FormControl>
     </Box>
   );
@@ -46,24 +56,33 @@ const ShelfNameInput = () => {
 // return error;
 //}
 
-const EditShelfButton = (props) => {
+const AddUpdateBook = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
       <IconButton
-        icon={<FontAwesomeIcon icon={faPen} size="md" />}
-        bg="inherit"
-        _hover="inherit"
+        icon={<AddIcon />}
+        height={BOOK_HEIGHT + 5}
+        padding={12}
+        margin={2}
+        shadow="lg"
+        opacity="50%"
+        _hover={{
+          bg: useColorModeValue("yellow.400", "yellow.500"),
+          opacity: "100%",
+          shadow: "xl",
+        }}
         onClick={onOpen}
       ></IconButton>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edit Shelf</ModalHeader>
+          <ModalHeader>Add Book</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <ShelfNameInput />
+            <BookNameInput />
+            <BookISBNInput />
           </ModalBody>
 
           <ModalFooter>
@@ -97,4 +116,4 @@ const EditShelfButton = (props) => {
     </Box>
   );
 };
-export default EditShelfButton;
+export default AddUpdateBook;
