@@ -1,5 +1,7 @@
 import { Center, VStack, Text } from "@chakra-ui/layout";
 
+export const BOOK_HEIGHT = 175;
+export const BOOK_MARGIN = 10;
 export const PageInProgress = () => {
   return (
     <VStack>

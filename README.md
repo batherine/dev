@@ -3,6 +3,7 @@
 [home](batherine.dev)
 
 ## Here lies my homepage. The current useless features are:
+
 * Useless homepage
 * Useless projects
 * Useless book reviews (database tbd)

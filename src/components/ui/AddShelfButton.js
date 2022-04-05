@@ -1,6 +1,8 @@
 import {
   Button,
   Box,
+  Container,
+  Flex,
   IconButton,
   Modal,
   ModalBody,
@@ -15,8 +17,7 @@ import {
   Input,
   FormControl,
 } from "@chakra-ui/react";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AddIcon } from "@chakra-ui/icons";
 
 //   <Button onClick={onOpen} >Open Modal</Button> */
 //
@@ -46,21 +47,28 @@ const ShelfNameInput = () => {
 // return error;
 //}
 
-const EditShelfButton = (props) => {
+const AddShelfButton = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box>
+    <Flex>
       <IconButton
-        icon={<FontAwesomeIcon icon={faPen} size="md" />}
-        bg="inherit"
-        _hover="inherit"
+        icon={<AddIcon />}
+        shadow="2xl"
+        bg={useColorModeValue("yellow.400", "yellow.500")}
+        w="100%"
+        opacity="90%"
+        _hover={{
+          bg: useColorModeValue("yellow.400", "yellow.500"),
+          opacity: "100%",
+          shadow: "dark-lg",
+        }}
         onClick={onOpen}
       ></IconButton>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edit Shelf</ModalHeader>
+          <ModalHeader>Add Shelf</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <ShelfNameInput />
@@ -94,7 +102,7 @@ const EditShelfButton = (props) => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </Box>
+    </Flex>
   );
 };
-export default EditShelfButton;
+export default AddShelfButton;
