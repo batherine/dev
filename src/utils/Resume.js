@@ -65,6 +65,11 @@ export const Skills = [{
 },
 {
     type: "language",
+    value: "Kotlin",
+    color: "teal"
+},
+{
+    type: "language",
     value: "SQL",
     color: "teal"
 },
