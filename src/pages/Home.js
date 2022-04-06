@@ -35,6 +35,7 @@ const Home = () => {
       <Container
         zIndex={1}
         bg={useColorModeValue("white", "gray.800")}
+        opacity={"95%"}
         rounded={"md"}
         paddingTop={"30px"}
         boxShadow="dark-lg">
@@ -64,7 +65,7 @@ const Home = () => {
             Work
           </Heading>
 
-          <Accordion allowMultiple>
+          <Accordion allowMultiple opacity={"inherit"}>
             {Work.map((job, i) =>
               <WorkEntry key={i} job={job}></WorkEntry>)}
           </Accordion>
