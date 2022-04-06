@@ -49,7 +49,7 @@ const ShelfNameInput = () => {
 const EditShelfButton = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box>
+    <Box >
       <IconButton
         icon={<FontAwesomeIcon icon={faPen} size="md" />}
         bg="inherit"

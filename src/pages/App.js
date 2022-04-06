@@ -14,7 +14,7 @@ const App = ({ children, router }) => {
     <Box>
       <BrowserRouter>
         <NavigationBar />
-        <Container maxW="container.lg" pt={"25px"}>
+        <Container maxW="container.lg" pt={"100px"}>
           <Routes>
             <Route path="/" exact element={<Home />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
