@@ -39,6 +39,112 @@ export const Education = [{
         "Operating Systems",
         "Data Communications & Networking"
     ]
+}];
 
 
+
+export const Skills = [{
+    type: "language",
+    value: "RPG",
+    color: "teal"
+},
+{
+    type: "language",
+    value: "CL",
+    color: "teal"
+},
+{
+    type: "language",
+    value: "Java",
+    color: "teal"
+},
+{
+    type: "language",
+    value: "JavaScript",
+    color: "teal"
+},
+{
+    type: "language",
+    value: "SQL",
+    color: "teal"
+},
+{
+    type: "language",
+    value: "NRQL",
+    color: "teal"
+},
+{
+    type: "language",
+    value: "Python",
+    color: "teal"
+},
+{
+    type: "framework",
+    value: "React",
+    color: "red"
+},
+{
+    type: "framework",
+    value: "ExtJS",
+    color: "red"
+},
+{
+    type: "framework",
+    value: "Node",
+    color: "red"
+},
+{
+    type: "technology",
+    value: "IntelliJ",
+    color: "purple"
+},
+{
+    type: "technology",
+    value: "Eclipse",
+    color: "purple"
+},
+{
+    type: "technology",
+    value: "Rational",
+    color: "purple"
+},
+{
+    type: "technology",
+    value: "VSCode",
+    color: "purple"
+},
+{
+    type: "technology",
+    value: "Bash",
+    color: "purple"
+},
+{
+    type: "technology",
+    value: "Git/GitHub",
+    color: "purple"
+},
+{
+    type: "technology",
+    value: "Jira",
+    color: "purple"
+},
+{
+    type: "OS",
+    value: "Windows",
+    color: "blue"
+},
+{
+    type: "OS",
+    value: "IBM i/Websphere",
+    color: "blue"
+},
+{
+    type: "OS",
+    value: "Linux",
+    color: "blue"
+},
+{
+    type: "OS",
+    value: "Unix",
+    color: "blue"
 }];
