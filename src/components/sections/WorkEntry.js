@@ -39,7 +39,7 @@ const WorkEntry = ({ job, children }) => {
 
                             <Spacer />
 
-                            <Stack paddingRight={3}>
+                            <Stack marginRight={3}>
                                 <Text as={"em"} align={"right"}> {job.dates} <br /> {job.location} </Text>
                             </Stack>
 
@@ -51,7 +51,7 @@ const WorkEntry = ({ job, children }) => {
                 </h2>
 
                 <AccordionPanel pb={4} >
-                    <UnorderedList paddingLeft={4} fontSize="sm">
+                    <UnorderedList marginLeft={4} fontSize="sm">
                         {job.descriptions.map((description, i) => (
                             <ListItem>{description}</ListItem>
                         ))

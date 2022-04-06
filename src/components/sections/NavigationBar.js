@@ -113,7 +113,7 @@ const NavigationBar = (props) => {
   const { toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} boxShadow="lg">
+    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} boxShadow="lg" position={"fixed"} w={"100%"} zIndex={2}>
       <Flex h={16} alignItems={"center"} justifyContent="space-evenly">
         <HomeButton />
 
