@@ -1,6 +1,6 @@
 # home sweet home :)
 
-[home](batherine.dev)
+[home](www.batherine.dev)
 
 ## Here lies my homepage. The current useless features are:
 
