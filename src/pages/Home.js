@@ -1,4 +1,4 @@
-import { Work, Education } from "../utils/Resume";
+import { Work, Education, Skills } from "../utils/Resume";
 import {
   useColorModeValue,
   Heading,
@@ -10,14 +10,11 @@ import {
   VStack,
   Text,
   Flex,
-  HStack,
-  Grid,
-  GridItem,
-  IconButton
 } from "@chakra-ui/react";
 import Section from "../components/sections/Section";
 import WorkEntry from "../components/sections/WorkEntry";
 import EducationEntry from "../components/sections/EducationEntry";
+import SkillsEntry from "../components/sections/SkillsEntry";
 import ExtNavLink from "../components/ui/NavLink";
 import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,13 +27,17 @@ const Resume = [
 ];
 
 const Home = () => {
-  //return <PageInProgress />;
   return (
 
     <VStack >
       <BackgroundImage />
       <Box height={"500px"} />
-      <Container zIndex={1} bg={useColorModeValue("white", "gray.800")} rounded={"md"} paddingTop={"30px"}>
+      <Container
+        zIndex={1}
+        bg={useColorModeValue("white", "gray.800")}
+        rounded={"md"}
+        paddingTop={"30px"}
+        boxShadow="dark-lg">
 
         <Flex justify={"space-between"} flexDirection={"row"}>
           <Container>
@@ -83,6 +84,21 @@ const Home = () => {
               <EducationEntry key={i} edu={edu}></EducationEntry>)}
           </Accordion>
         </Section>
+
+        <br />
+
+        <Section delay={.05}>
+          <Heading
+            variant="section-title"
+            textDecorationColor={useColorModeValue("yellow.400", "yellow.500")}>
+            Languages & Technologies
+          </Heading>
+
+          <Accordion index={0}>
+            <SkillsEntry skills={Skills}></SkillsEntry>
+          </Accordion>
+        </Section>
+
       </Container>
 
     </VStack >

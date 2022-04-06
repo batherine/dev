@@ -16,9 +16,10 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { HomeButton } from "../ui/HomeButton";
+import ExtNavLink from "../ui/NavLink";
 
 const InternalLinks = [
   {
@@ -91,23 +92,6 @@ const NavLink = ({ children, url }) => {
     </Link>
   );
 };
-
-const ExtNavLink = ({ children, url, icon }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("yellow.400", "yellow.500"),
-    }}
-    href={url}
-    isExternal
-  >
-    <FontAwesomeIcon icon={icon} size="lg" />
-    {children}
-  </Link>
-);
 
 const NavigationBar = (props) => {
   const { toggleColorMode } = useColorMode();
