@@ -13,7 +13,7 @@ export const Work = [
     },
     {
         title: "Backend Developer",
-        employer: "HCS (Aquired by WellSky)",
+        employer: "HCS (Acquired by WellSky)",
         dates: "Jul 2017-Oct 2019",
         location: "Wall, NJ",
         descriptions: ["Practiced agile development through code enhancements for Revenue Cycle module of application",
