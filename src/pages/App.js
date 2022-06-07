@@ -18,8 +18,8 @@ const App = ({ children, router }) => {
           <Routes>
             <Route path="/" exact element={<Home />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/bookclub" element={<BookClub />}></Route>
-            <Route path="/galleriaDeBlur" element={<BlurryGallery />}></Route>
+            {/* <Route path="/bookclub" element={<BookClub />}></Route>  */}
+            {/* <Route path="/galleriaDeBlur" element={<BlurryGallery />}></Route> */}
             <Route path="/Test" element={<EditShelfButton />}></Route>
             <Route component={<NotFound />}></Route>
           </Routes>
