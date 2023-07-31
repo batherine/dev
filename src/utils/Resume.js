@@ -1,15 +1,15 @@
 export const Work = [
     {
-        title: "Software Engineer III",
+        title: "Sr. Software Engineer",
         employer: "WellSky",
         dates: "Oct 2019-Present",
         location: "Remote",
-        descriptions: ["Sole engineer tasked with resiliency, performance, and scalability research for the Specialty Care application",
-            "Worked with IBM lab services to identify processes within the core application that require optimization",
-            "Created in-depth documentation on best practices for general backend development and use of SQL",
+        descriptions: ["Lead engineer tasked with resiliency, performance, and scalability research for the core application",
+            "Worked with teams internally and externally to identify and improve processes within the application requiring optimization",
+            "Created in-depth documentation for general backend development best practices and performance standards",
             "Integrated and maintained New Relic service reporting for client servers ",
-            "Implemented various custom New Relic integrations using javascript, Java, GraphQL, and bash",
-            "Instrumental in server monitoring alerts and dashboard set up for critical failures related to cpu utilization, memory usage, network latency, application performance, etc."
+            "Implemented various custom New Relic integrations using Javascript, Java, GraphQL, and bash",
+            "Instrumental in creating server monitoring alerts and dashboards. Tools set up were used to monitor for critical failures related to cpu utilization, memory usage, network latency, general application performance, etc."
         ]
     },
     {
@@ -17,9 +17,9 @@ export const Work = [
         employer: "HCS (Acquired by WellSky)",
         dates: "Jul 2017-Oct 2019",
         location: "Wall, NJ",
-        descriptions: ["Implemented code enhancements and bug fixes for the application’s Revenue Cycle module",
-            "Practiced agile development with releases going out at the end of each two week sprint",
-            "Gained comprehensive knowledge of long term care and skilled nursing business operations ",
+        descriptions: ["Implemented code enhancements and bug fixes for the application’s Billing/Revenue module of application",
+            "Practiced agile software development",
+            "Gained comprehensive knowledge of long term care and skilled nursing business operations",
             "Provided clients with support on technical aspects of core application"
         ]
     }
